@@ -1,0 +1,35 @@
+$icon-features
+  width $iw = 44px
+  height @width
+  float left
+  margin-right 35px
+
+.features
+  @extend $clearfix
+  background-color #f8f8f9
+  padding 70px 0
+  .feature-list
+    float right
+    width 50%
+    li
+      margin-top 70px
+      for $i in modern customize developer fullyresponsive
+        &.{$i}::before
+          @extend $icon, $icon-before, $icon-features
+          spriteP(lookup('$'+$i), 44px)
+  .slider
+    float left
+    width 50%
+    text-align center
+  .feature-header
+    color #727272
+    font-size 2.5rem
+    font-weight 600
+  .feature-title
+    margin 0
+    padding-bottom 3px
+    color #98d361
+  .feature-desc
+    margin 0
+    color #686868
+

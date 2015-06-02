@@ -1,0 +1,15 @@
+.social
+  margin-top 50px
+  ul
+    text-align center
+    li
+      display inline-block
+      padding 0 25px
+      &>a
+        @extend $icon
+        width 50px
+        height @width
+        display inline-block
+        for $i in facebook twitter vimeo pinetrest
+          &.{$i}
+            spriteP(lookup('$'+$i), 50px)
